@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">FollowAssistant</string>
+    <string name="app_splash_title">Follow Assistant</string>
+    <string name="app_splash_loading">Loading...</string>
+    <string name="app_login_follow">Follow</string>
+    <string name="app_login_assistant">Assistant</string>
+    <string name="app_login_username_hint">Instagram Username</string>
+    <string name="app_login_password_hint">Instagram Password</string>
+    <string name="app_login_Login">Login</string>
+    <string name="app_main_title">Get Coins</string>
+    <string name="app_main_bottom_first">Earn Coins</string>
+    <string name="app_main_bottom_second">+ Likes</string>
+    <string name="app_main_bottom_third">+ Followers</string>
+    <string name="app_main_bottom_forth">More</string>
+</resources>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/splash_bg"
+    tools:context="androidclient.api.popsi.co.followassistant.view.activity.SplashActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="234px"
+        android:text="@string/app_splash_title"
+        android:textColor="@color/splash_app_title"
+        android:textSize="@dimen/splashactivity_app_title"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="82px"
+        android:text="@string/app_splash_loading"
+        android:textColor="@color/splash_app_title"
+        android:textSize="@dimen/splashactivity_app_loading" />
+</com.zhy.autolayout.AutoRelativeLayout>

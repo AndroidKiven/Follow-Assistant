@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="splash_app_title">#FFFFFF</color>
+    <color name="login_app_title">#49a8ce</color>
+    <color name="login_app_hint">#707070</color>
+    <color name="login_border">#E3E3E3</color>
+    <color name="login_btn_bg_normal">#00000000</color>
+    <color name="login_btn_bg_focus">#10000000</color>
+    <color name="main_activity_toolbar">#25b394</color>
+</resources>

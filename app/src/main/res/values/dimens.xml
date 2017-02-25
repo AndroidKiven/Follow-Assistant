@@ -1,0 +1,10 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="splashactivity_app_title">30sp</dimen>
+    <dimen name="splashactivity_app_loading">24sp</dimen>
+    <dimen name="loginactivity_app_title">48sp</dimen>
+    <dimen name="loginactivity_app_name_pass">18sp</dimen>
+    <dimen name="loginactivity_app_login">20sp</dimen>
+</resources>

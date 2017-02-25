@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/login_bg">
+
+    <TextView
+        android:id="@+id/tv_login_title_follow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="140px"
+        android:text="@string/app_login_follow"
+        android:textColor="@color/login_app_title"
+        android:textSize="@dimen/loginactivity_app_title" />
+
+    <TextView
+        android:id="@+id/tv_login_title_assistant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_login_title_follow"
+        android:layout_centerHorizontal="true"
+        android:text="@string/app_login_assistant"
+        android:textColor="@color/login_app_title"
+        android:textSize="@dimen/loginactivity_app_title" />
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/arl_login"
+        android:layout_width="800px"
+        android:layout_height="500px"
+        android:layout_below="@id/tv_login_title_assistant"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="114px"
+        android:background="@drawable/drawable_login_bg">
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/all_login_username"
+            android:layout_width="match_parent"
+            android:layout_height="240px"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/iv_login_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="60px"
+
+                android:src="@mipmap/login_username" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="50px"
+                android:layout_toRightOf="@id/iv_login_username"
+                android:background="@null"
+                android:hint="@string/app_login_username_hint"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textColor="@color/login_app_hint"
+                android:textSize="@dimen/loginactivity_app_name_pass" />
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <View
+            android:id="@+id/v_line"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_below="@id/all_login_username"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="30px"
+            android:layout_marginTop="10px"
+            android:background="@color/login_border"></View>
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/all_login_password"
+            android:layout_width="match_parent"
+            android:layout_height="240px"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/iv_login_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="60px"
+                android:src="@mipmap/login_password" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="50px"
+                android:layout_toRightOf="@id/iv_login_password"
+                android:background="@null"
+                android:hint="@string/app_login_password_hint"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:textColor="@color/login_app_hint"
+                android:textSize="@dimen/loginactivity_app_name_pass" />
+        </com.zhy.autolayout.AutoLinearLayout>
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="800px"
+        android:layout_height="200px"
+        android:layout_below="@id/arl_login"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100px"
+        android:background="@drawable/drawable_login_btn_selector"
+        android:text="@string/app_login_Login"
+        android:textColor="@color/login_app_hint"
+        android:textSize="@dimen/loginactivity_app_login" />
+
+</com.zhy.autolayout.AutoRelativeLayout>

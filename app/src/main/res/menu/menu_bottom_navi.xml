@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_earn_coins"
+        android:icon="@mipmap/first_focus"
+        android:title="@string/app_main_bottom_first" />
+    <item
+        android:id="@+id/menu_likes"
+        android:icon="@mipmap/second_focus"
+        android:title="@string/app_main_bottom_second" />
+    <item
+        android:id="@+id/menu_followers"
+        android:icon="@mipmap/third_focus"
+        android:title="@string/app_main_bottom_third" />
+    <item
+        android:id="@+id/menu_more"
+        android:icon="@mipmap/forth_focus"
+        android:title="@string/app_main_bottom_forth" />
+</menu>
