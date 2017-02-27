@@ -29,22 +29,47 @@
             android:layout_marginLeft="45px"
             android:src="@mipmap/notify_message" />
 
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="45px"
+            android:background="@mipmap/coins_bg">
 
+            <ImageView
+                android:id="@+id/iv_coins"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/coins" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@id/iv_coins"
+                android:maxLines="1"
+                android:text="@string/app_main_coins_number"
+                android:textColor="@color/splash_app_title"
+                android:textSize="@dimen/coins_num_textsize" />
+        </com.zhy.autolayout.AutoRelativeLayout>
     </androidclient.api.popsi.co.followassistant.autoview.AutoToolbar>
 
-
-    <android.support.v4.view.ViewPager
-        android:id="@+id/vp_main_content"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/tb_title"></android.support.v4.view.ViewPager>
-
-    <android.support.design.widget.BottomNavigationView
+    <androidclient.api.popsi.co.followassistant.autoview.MyBottomNavigationView
         android:id="@+id/bnv_bottom_bar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:layout_alignParentBottom="true"
         app:itemBackground="@color/splash_app_title"
-        app:itemTextColor="@color/colorAccent"
+        app:itemIconTint="@drawable/drawable_bottom_nav_color_selector"
+        app:itemTextColor="@drawable/drawable_bottom_nav_color_selector"
         app:menu="@menu/menu_bottom_navi" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_main_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bnv_bottom_bar"
+        android:layout_below="@id/tb_title"></android.support.v4.view.ViewPager>
+
+
 </com.zhy.autolayout.AutoRelativeLayout>

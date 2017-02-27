@@ -4,6 +4,9 @@ package androidclient.api.popsi.co.followassistant.adapter;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.app.FragmentTransaction;
+import android.view.View;
+import android.view.ViewGroup;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,6 +18,7 @@ import java.util.List;
 public class ViewPagerFragmentAdapter extends FragmentPagerAdapter {
 
     private final List<Fragment> mFragmentList = new ArrayList<>();
+
 
     public ViewPagerFragmentAdapter(FragmentManager fm) {
         super(fm);
@@ -33,5 +37,4 @@ public class ViewPagerFragmentAdapter extends FragmentPagerAdapter {
     public void addFragment(Fragment fragment) {
         mFragmentList.add(fragment);
     }
-
 }

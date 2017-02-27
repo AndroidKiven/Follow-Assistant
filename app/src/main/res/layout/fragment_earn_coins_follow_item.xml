@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/cv_need_followed_head"
+        android:layout_width="120px"
+        android:layout_height="120px"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="50px"
+        android:src="@mipmap/default_head" />
+
+    <TextView
+        android:id="@+id/tv_need_followed_username"
+        android:layout_width="300px"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="30px"
+        android:layout_toRightOf="@id/cv_need_followed_head"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:maxWidth="300px"
+        android:text="@string/app_main_follow_username" />
+
+    <Button
+        android:layout_width="400px"
+        android:layout_height="160px"
+        android:layout_marginLeft="120px"
+        android:layout_toRightOf="@id/tv_need_followed_username"
+        android:drawableEnd="@mipmap/like_add_coins"
+        android:drawablePadding="@dimen/follow_add_coins_drawablepadding"
+        android:drawableRight="@mipmap/like_add_coins"
+        android:paddingRight="@dimen/follow_add_coins_padding"
+        android:text="@string/app_main_like"
+        android:textAllCaps="false"
+        android:textColor="@color/splash_app_title"
+        android:textSize="@dimen/loginactivity_app_name_pass"
+        android:theme="@style/AddLikeTheme" />
+
+</com.zhy.autolayout.AutoRelativeLayout>

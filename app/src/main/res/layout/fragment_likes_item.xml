@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/iv_liked_fragment"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_centerHorizontal="true"
+        android:scaleType="fitXY"
+        android:src="@mipmap/default_likes_fragment" />
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="120dp"
+        android:layout_height="25dp"
+        android:layout_alignBottom="@+id/iv_liked_fragment"
+        android:layout_alignLeft="@+id/iv_liked_fragment"
+        android:layout_alignStart="@+id/iv_liked_fragment"
+        android:background="@color/likes_fragment_item_likesnum_bg">
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@mipmap/likes" />
+
+            <TextView
+                android:id="@+id/tv_likes_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="3dp"
+                android:text="@string/app_main_coins_number"
+                android:textColor="@color/splash_app_title"
+                android:textSize="@dimen/like_fragment_likesnum" />
+        </com.zhy.autolayout.AutoLinearLayout>
+    </com.zhy.autolayout.AutoRelativeLayout>
+</com.zhy.autolayout.AutoRelativeLayout>

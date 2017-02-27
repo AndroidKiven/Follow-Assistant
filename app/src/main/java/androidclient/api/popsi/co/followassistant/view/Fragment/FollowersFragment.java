@@ -1,32 +1,37 @@
-package androidclient.api.popsi.co.followassistant.view.Fragment;
+package androidclient.api.popsi.co.followassistant.view.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import androidclient.api.popsi.co.followassistant.R;
+import androidclient.api.popsi.co.followassistant.presenter.FollowersFragmentPresenter;
+import androidclient.api.popsi.co.followassistant.view.iview.IFollowersFragmentView;
 import butterknife.ButterKnife;
 
 /**
  * Created by Kiven on 2017/2/24.
  */
 
-public class FollowersFragment extends Fragment {
-
-    View mFragmentView;
+public class FollowersFragment extends BaseFragment<IFollowersFragmentView, FollowersFragmentPresenter> implements IFollowersFragmentView {
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        if (null == mFragmentView) {
-            mFragmentView = inflater.inflate(R.layout.fragment_followers, container, false);
-            ButterKnife.bind(this, mFragmentView);
-            // initView();
-            //  initData();
-        }
-        return mFragmentView;
+        super.onCreateView(inflater, container, savedInstanceState);
+        ButterKnife.bind(this, mRootView);
+        return mRootView;
+    }
+
+    @Override
+    public int setLayoutResouceId() {
+        return R.layout.fragment_followers;
+    }
+
+    @Override
+    public FollowersFragmentPresenter createPresenter() {
+        return new FollowersFragmentPresenter();
     }
 }

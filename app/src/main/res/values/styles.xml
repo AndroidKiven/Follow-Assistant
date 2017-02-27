@@ -8,4 +8,10 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="SkipTheme" parent="Widget.AppCompat.Button.Colored">
+        <item name="colorButtonNormal">@color/main_activity_toolbar</item>
+    </style>
+    <style name="AddLikeTheme" parent="Widget.AppCompat.Button.Colored">
+        <item name="colorButtonNormal">@color/earn_coins_like_fragment_add_like</item>
+    </style>
 </resources>

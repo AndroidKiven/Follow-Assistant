@@ -10,4 +10,8 @@
     <color name="login_btn_bg_normal">#00000000</color>
     <color name="login_btn_bg_focus">#10000000</color>
     <color name="main_activity_toolbar">#25b394</color>
+    <color name="earn_coins_like_fragment_add_like">#ff6b6b</color>
+    <color name="likes_fragment_top_text">#3d3d3d</color>
+    <color name="likes_fragment_top_bg">#d3d3d3</color>
+    <color name="likes_fragment_item_likesnum_bg">#80c4c4c4</color>
 </resources>

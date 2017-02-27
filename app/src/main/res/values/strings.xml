@@ -12,4 +12,11 @@
     <string name="app_main_bottom_second">+ Likes</string>
     <string name="app_main_bottom_third">+ Followers</string>
     <string name="app_main_bottom_forth">More</string>
+    <string name="app_main_coins_number">1000</string>
+    <string name="app_main_username">Rachel Scott</string>
+    <string name="app_main_skip">Skip</string>
+    <string name="app_main_like">Like  +1</string>
+    <string name="app_main_follow_username">Robert Tucker</string>
+    <string name="app_main_follow">Follow +4</string>
+    <string name="app_likefragment_top">Tap a photo/video to get likes</string>
 </resources>

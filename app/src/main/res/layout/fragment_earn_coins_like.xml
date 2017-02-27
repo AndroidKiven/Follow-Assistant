@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:id="@+id/arl_earn_coins_like_top"
+            android:layout_width="800px"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40px">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/cv_username_head"
+                android:layout_width="120px"
+                android:layout_height="120px"
+                android:layout_gravity="center_vertical"
+                android:src="@mipmap/default_head" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20px"
+                android:layout_toRightOf="@id/cv_username_head"
+                android:text="@string/app_login_Login"
+                android:textSize="@dimen/coins_num_textsize" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="80px"
+                android:src="@mipmap/extra_functions" />
+
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+        <ImageView
+            android:id="@+id/iv_need_like_pic"
+            android:layout_width="900px"
+            android:layout_height="900px"
+            android:layout_below="@id/arl_earn_coins_like_top"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30px"
+            android:src="@mipmap/default_need_like" />
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="930px"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_need_like_pic"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20px"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="300px"
+                android:layout_height="160px"
+                android:text="@string/app_main_skip"
+                android:textAllCaps="false"
+                android:textColor="@color/splash_app_title"
+                android:textSize="@dimen/loginactivity_app_name_pass"
+                android:theme="@style/SkipTheme" />
+
+            <!--<Button
+                android:layout_width="match_parent"
+                android:layout_height="160px"
+                android:drawableEnd="@mipmap/like_add_coins"
+                android:drawablePadding="@dimen/like_add_coins_drawablepadding"
+                android:drawableRight="@mipmap/like_add_coins"
+                android:paddingRight="@dimen/like_add_coins_padding"
+                android:text="@string/app_main_like"
+                android:textAllCaps="false"
+                android:textColor="@color/splash_app_title"
+                android:textSize="@dimen/loginactivity_app_name_pass"
+                android:theme="@style/AddLikeTheme" />-->
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="160px"
+                android:drawableEnd="@mipmap/like_add_coins"
+                android:drawablePadding="@dimen/like_add_coins_drawablepadding"
+                android:drawableRight="@mipmap/like_add_coins"
+                android:paddingRight="@dimen/like_add_coins_padding"
+                android:text="@string/app_main_like"
+                android:textAllCaps="false"
+                android:textColor="@color/splash_app_title"
+                android:textSize="@dimen/loginactivity_app_name_pass"
+                android:theme="@style/AddLikeTheme" />
+        </com.zhy.autolayout.AutoLinearLayout>
+    </com.zhy.autolayout.AutoRelativeLayout>
+</android.support.v4.widget.NestedScrollView>

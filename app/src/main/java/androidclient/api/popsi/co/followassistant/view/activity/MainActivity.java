@@ -12,11 +12,12 @@ import android.view.View;
 import androidclient.api.popsi.co.followassistant.R;
 import androidclient.api.popsi.co.followassistant.adapter.ViewPagerFragmentAdapter;
 import androidclient.api.popsi.co.followassistant.autoview.AutoToolbar;
+import androidclient.api.popsi.co.followassistant.autoview.MyBottomNavigationView;
 import androidclient.api.popsi.co.followassistant.presenter.MainActivityPresenter;
-import androidclient.api.popsi.co.followassistant.view.Fragment.EarnCoinsFragment;
-import androidclient.api.popsi.co.followassistant.view.Fragment.FollowersFragment;
-import androidclient.api.popsi.co.followassistant.view.Fragment.LikesFragment;
-import androidclient.api.popsi.co.followassistant.view.Fragment.MoreFragment;
+import androidclient.api.popsi.co.followassistant.view.fragment.EarnCoinsFragment;
+import androidclient.api.popsi.co.followassistant.view.fragment.FollowersFragment;
+import androidclient.api.popsi.co.followassistant.view.fragment.LikesFragment;
+import androidclient.api.popsi.co.followassistant.view.fragment.MoreFragment;
 import androidclient.api.popsi.co.followassistant.view.iview.IMainActivityView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -32,7 +33,7 @@ public class MainActivity extends BaseTranslucentActivity<IMainActivityView, Mai
     @BindView(R.id.vp_main_content)
     ViewPager vp_main_content;
     @BindView(R.id.bnv_bottom_bar)
-    BottomNavigationView bnv_bottom_bar;
+    MyBottomNavigationView bnv_bottom_bar;
     MenuItem prevMenuItem;
 
     @Override
@@ -41,6 +42,7 @@ public class MainActivity extends BaseTranslucentActivity<IMainActivityView, Mai
         setContentView(R.layout.main_activity);
         ButterKnife.bind(this);
         setOrChangeTranslucentColor(tb_title, getResources().getColor(R.color.main_activity_toolbar));
+        bnv_bottom_bar.SetNormalBottomNavigation();
         bnv_bottom_bar.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -86,7 +88,7 @@ public class MainActivity extends BaseTranslucentActivity<IMainActivityView, Mai
         vp_main_content.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                return true;
+                return false;
             }
         });
         presenter.addFragmentToViewPager();

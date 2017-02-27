@@ -11,6 +11,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="140px"
         android:text="@string/app_login_follow"
+        android:textAllCaps="false"
         android:textColor="@color/login_app_title"
         android:textSize="@dimen/loginactivity_app_title" />
 
@@ -21,22 +22,23 @@
         android:layout_below="@id/tv_login_title_follow"
         android:layout_centerHorizontal="true"
         android:text="@string/app_login_assistant"
+        android:textAllCaps="false"
         android:textColor="@color/login_app_title"
         android:textSize="@dimen/loginactivity_app_title" />
 
     <com.zhy.autolayout.AutoRelativeLayout
         android:id="@+id/arl_login"
         android:layout_width="800px"
-        android:layout_height="500px"
+        android:layout_height="400px"
         android:layout_below="@id/tv_login_title_assistant"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="114px"
+        android:layout_marginTop="200px"
         android:background="@drawable/drawable_login_bg">
 
         <com.zhy.autolayout.AutoLinearLayout
             android:id="@+id/all_login_username"
             android:layout_width="match_parent"
-            android:layout_height="240px"
+            android:layout_height="200px"
             android:orientation="horizontal">
 
             <ImageView
@@ -45,7 +47,6 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_marginLeft="60px"
-
                 android:src="@mipmap/login_username" />
 
             <EditText
@@ -58,6 +59,7 @@
                 android:hint="@string/app_login_username_hint"
                 android:inputType="text"
                 android:maxLines="1"
+                android:textAllCaps="false"
                 android:textColor="@color/login_app_hint"
                 android:textSize="@dimen/loginactivity_app_name_pass" />
         </com.zhy.autolayout.AutoLinearLayout>
@@ -75,7 +77,7 @@
         <com.zhy.autolayout.AutoLinearLayout
             android:id="@+id/all_login_password"
             android:layout_width="match_parent"
-            android:layout_height="240px"
+            android:layout_height="200px"
             android:layout_alignParentBottom="true"
             android:orientation="horizontal">
 
@@ -97,6 +99,7 @@
                 android:hint="@string/app_login_password_hint"
                 android:inputType="textPassword"
                 android:maxLines="1"
+                android:textAllCaps="false"
                 android:textColor="@color/login_app_hint"
                 android:textSize="@dimen/loginactivity_app_name_pass" />
         </com.zhy.autolayout.AutoLinearLayout>
@@ -105,12 +108,13 @@
     <Button
         android:id="@+id/btn_login"
         android:layout_width="800px"
-        android:layout_height="200px"
+        android:layout_height="160px"
         android:layout_below="@id/arl_login"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="100px"
+        android:layout_marginTop="120px"
         android:background="@drawable/drawable_login_btn_selector"
         android:text="@string/app_login_Login"
+        android:textAllCaps="false"
         android:textColor="@color/login_app_hint"
         android:textSize="@dimen/loginactivity_app_login" />
 
