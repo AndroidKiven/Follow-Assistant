@@ -6,12 +6,19 @@
         <item name="colorPrimary">@color/main_activity_toolbar</item>
         <item name="colorPrimaryDark">@color/main_activity_toolbar</item>
         <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="textAllCaps">false</item>
     </style>
 
     <style name="SkipTheme" parent="Widget.AppCompat.Button.Colored">
         <item name="colorButtonNormal">@color/main_activity_toolbar</item>
     </style>
+
     <style name="AddLikeTheme" parent="Widget.AppCompat.Button.Colored">
         <item name="colorButtonNormal">@color/earn_coins_like_fragment_add_like</item>
+    </style>
+
+    <style name="back_arrow_white_theme" parent="AppTheme">
+        <item name="colorControlNormal">@color/splash_app_title</item>
     </style>
 </resources>

@@ -26,6 +26,11 @@ public class FollowersFragment extends BaseFragment<IFollowersFragmentView, Foll
     }
 
     @Override
+    protected void lazyLoad() {
+
+    }
+
+    @Override
     public int setLayoutResouceId() {
         return R.layout.fragment_followers;
     }

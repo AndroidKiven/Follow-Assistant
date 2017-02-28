@@ -38,4 +38,6 @@ dependencies {
     compile 'com.squareup.retrofit2:converter-gson:2.1.0'
     compile 'com.squareup.retrofit2:converter-scalars:2.1.0'
     compile 'com.android.support:design:25.0.1'
+    compile 'de.hdodenhof:circleimageview:2.1.0'
+    compile 'com.makeramen:roundedimageview:2.3.0'
 }

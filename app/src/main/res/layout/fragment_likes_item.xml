@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/arl_need_liked_item"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
@@ -9,7 +10,8 @@
         android:layout_height="120dp"
         android:layout_centerHorizontal="true"
         android:scaleType="fitXY"
-        android:src="@mipmap/default_likes_fragment" />
+        android:src="@mipmap/default_likes_fragment"
+        android:transitionName="selected_photos_or_videos" />
 
     <com.zhy.autolayout.AutoRelativeLayout
         android:layout_width="120dp"
@@ -17,7 +19,8 @@
         android:layout_alignBottom="@+id/iv_liked_fragment"
         android:layout_alignLeft="@+id/iv_liked_fragment"
         android:layout_alignStart="@+id/iv_liked_fragment"
-        android:background="@color/likes_fragment_item_likesnum_bg">
+        android:background="@color/likes_fragment_item_likesnum_bg"
+        android:transitionName="selected_photos_or_videos_likes_num">
 
         <com.zhy.autolayout.AutoLinearLayout
             android:layout_width="wrap_content"

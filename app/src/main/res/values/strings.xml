@@ -19,4 +19,7 @@
     <string name="app_main_follow_username">Robert Tucker</string>
     <string name="app_main_follow">Follow +4</string>
     <string name="app_likefragment_top">Tap a photo/video to get likes</string>
+    <string name="app_make_orders">Make Orders</string>
+    <string name="app_make_orders_likes_num">x 100</string>
+    <string name="app_make_orders_coins_num">20</string>
 </resources>

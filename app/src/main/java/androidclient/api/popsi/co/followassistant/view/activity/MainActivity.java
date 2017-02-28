@@ -63,6 +63,7 @@ public class MainActivity extends BaseTranslucentActivity<IMainActivityView, Mai
                 return true;
             }
         });
+        vp_main_content.setOffscreenPageLimit(2);
         vp_main_content.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {

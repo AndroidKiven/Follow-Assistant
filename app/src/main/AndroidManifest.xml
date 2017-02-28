@@ -32,6 +32,10 @@
         <activity
             android:name=".view.activity.MainActivity"
             android:screenOrientation="portrait"></activity>
+
+        <activity
+            android:name=".view.activity.MakeOrderActivity"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

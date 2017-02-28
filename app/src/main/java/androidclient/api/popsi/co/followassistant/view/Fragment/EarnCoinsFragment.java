@@ -42,6 +42,11 @@ public class EarnCoinsFragment extends BaseFragment<IEarnCoinsFragmentView, Earn
     }
 
     @Override
+    protected void lazyLoad() {
+
+    }
+
+    @Override
     public int setLayoutResouceId() {
         return R.layout.fragment_earn_coins;
     }
@@ -55,8 +60,6 @@ public class EarnCoinsFragment extends BaseFragment<IEarnCoinsFragmentView, Earn
     public void initEarnCoinsLikeFragmentView() {
         mTitleList.add("Like");
         mTitleList.add("Follow");
-
-        //tbl_earn_coins_fragment.setTabMode(TabLayout.MODE_SCROLLABLE);//设置tab模式，当前为系统默认模式
 
         viewPagerEarnCoinsFragmentAdapter = new ViewPagerEarnCoinsFragmentAdapter(getChildFragmentManager());
         viewPagerEarnCoinsFragmentAdapter.addFragment(new EarnCoinsLikeFragment());

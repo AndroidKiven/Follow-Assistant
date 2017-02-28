@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidclient.api.popsi.co.followassistant.autoview.AutoToolbar
+        android:id="@+id/tb_make_orders"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/main_activity_toolbar"
+        android:minHeight="?attr/actionBarSize"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        app:navigationIcon="@drawable/abc_ic_ab_back_material"
+        app:theme="@style/back_arrow_white_theme">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/app_make_orders"
+            android:textColor="@color/splash_app_title"
+            android:textSize="@dimen/loginactivity_app_name_pass"
+            android:textStyle="bold" />
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="45px"
+            android:background="@mipmap/coins_bg">
+
+            <ImageView
+                android:id="@+id/iv_coins"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/coins" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@id/iv_coins"
+                android:maxLines="1"
+                android:text="@string/app_main_coins_number"
+                android:textColor="@color/splash_app_title"
+                android:textSize="@dimen/coins_num_textsize" />
+        </com.zhy.autolayout.AutoRelativeLayout>
+    </androidclient.api.popsi.co.followassistant.autoview.AutoToolbar>
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tb_make_orders">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/iv_select_need_liked"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30px"
+            android:scaleType="fitXY"
+            android:src="@mipmap/default_likes_fragment"
+            android:transitionName="selected_photos_or_videos"
+            app:riv_corner_radius="8dp" />
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:layout_width="120dp"
+            android:layout_height="25dp"
+            android:layout_alignBottom="@+id/iv_select_need_liked"
+            android:layout_alignLeft="@+id/iv_select_need_liked"
+            android:layout_alignStart="@+id/iv_select_need_liked"
+            android:background="@drawable/drawable_make_orders_selected"
+            android:transitionName="selected_photos_or_videos_likes_num">
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@mipmap/likes" />
+
+                <TextView
+                    android:id="@+id/tv_likes_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="3dp"
+                    android:text="@string/app_main_coins_number"
+                    android:textColor="@color/splash_app_title"
+                    android:textSize="@dimen/like_fragment_likesnum" />
+            </com.zhy.autolayout.AutoLinearLayout>
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+        <View
+            android:id="@+id/v_line"
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:layout_below="@id/iv_select_need_liked"
+            android:layout_marginTop="30px"
+            android:background="@color/make_orders_item_line"></View>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_orders_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/v_line" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+</com.zhy.autolayout.AutoRelativeLayout>

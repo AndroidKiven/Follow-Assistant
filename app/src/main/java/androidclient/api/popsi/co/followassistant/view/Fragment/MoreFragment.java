@@ -26,6 +26,11 @@ public class MoreFragment extends BaseFragment<IMoreFragmentView, MoreFragmentPr
     }
 
     @Override
+    protected void lazyLoad() {
+
+    }
+
+    @Override
     public int setLayoutResouceId() {
         return R.layout.fragment_more;
     }

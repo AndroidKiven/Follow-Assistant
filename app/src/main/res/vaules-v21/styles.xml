@@ -6,6 +6,7 @@
         <item name="colorPrimary">@color/main_activity_toolbar</item>
         <item name="colorPrimaryDark">@color/main_activity_toolbar</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="textAllCaps">false</item>
     </style>
 
     <style name="SkipTheme" parent="Widget.AppCompat.Button.Colored">

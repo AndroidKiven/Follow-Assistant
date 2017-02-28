@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:id="@+id/all_get_likes_numm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60px"
+        android:layout_marginTop="50px">
+
+        <ImageView
+            android:id="@+id/iv_make_orders"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@mipmap/orders_likes" />
+
+        <TextView
+            android:id="@+id/tv_need_likes_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="30px"
+            android:layout_toRightOf="@id/iv_make_orders"
+            android:text="@string/app_make_orders_likes_num"
+            android:textColor="@color/likes_fragment_top_text"
+            android:textSize="@dimen/make_orders_item_num" />
+
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="60px"
+        android:layout_marginTop="50px">
+
+        <TextView
+            android:id="@+id/tv_need_coins_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingRight="40px"
+            android:text="@string/app_make_orders_coins_num"
+            android:textColor="@color/likes_fragment_top_text"
+            android:textSize="@dimen/make_orders_item_num" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@mipmap/orders_coins" />
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1px"
+        android:layout_below="@id/all_get_likes_numm"
+        android:layout_marginLeft="50px"
+        android:layout_marginRight="50px"
+        android:layout_marginTop="50px"
+        android:background="@color/make_orders_item_line"></View>
+</com.zhy.autolayout.AutoRelativeLayout>

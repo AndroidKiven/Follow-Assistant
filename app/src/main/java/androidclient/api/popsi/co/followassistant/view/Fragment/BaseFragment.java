@@ -19,6 +19,9 @@ public abstract class BaseFragment<V extends BaseIView, T extends BasePresenter<
     View mRootView;
     public T presenter;
 
+    /** Fragment当前状态是否可见 */
+    protected boolean isVisible;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -28,6 +31,28 @@ public abstract class BaseFragment<V extends BaseIView, T extends BasePresenter<
             presenter.attach((V) this);
         }
         return mRootView;
+    }
+
+    @Override
+    public void setUserVisibleHint(boolean isVisibleToUser) {
+        super.setUserVisibleHint(isVisibleToUser);
+        if(getUserVisibleHint()){
+            isVisible = true;
+            onVisible();
+        }else{
+            isVisible = false;
+            onInvisible();
+        }
+    }
+
+    protected void onVisible() {
+        lazyLoad();
+    }
+
+    //如加载网络数据
+    protected abstract void lazyLoad();
+
+    protected void onInvisible() {
     }
 
     public abstract int setLayoutResouceId();

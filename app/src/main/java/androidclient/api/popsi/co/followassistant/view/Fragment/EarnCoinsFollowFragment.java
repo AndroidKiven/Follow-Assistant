@@ -44,6 +44,11 @@ public class EarnCoinsFollowFragment extends BaseFragment<IEarnCoinsFollowFragme
     }
 
     @Override
+    protected void lazyLoad() {
+
+    }
+
+    @Override
     public int setLayoutResouceId() {
         return R.layout.fragment_earn_coins_follow;
     }

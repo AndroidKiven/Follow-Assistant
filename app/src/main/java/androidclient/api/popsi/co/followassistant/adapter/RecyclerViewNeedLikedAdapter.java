@@ -7,12 +7,14 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.zhy.autolayout.AutoRelativeLayout;
 import com.zhy.autolayout.utils.AutoUtils;
 
 import java.util.List;
 
 import androidclient.api.popsi.co.followassistant.R;
 import androidclient.api.popsi.co.followassistant.bean.NeedLikedInfo;
+import androidclient.api.popsi.co.followassistant.listener.RecyclerViewOnClikcListener;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -24,9 +26,16 @@ public class RecyclerViewNeedLikedAdapter extends RecyclerView.Adapter<RecyclerV
 
     private List<NeedLikedInfo> needLikedInfoList;
 
+    RecyclerViewOnClikcListener recyclerViewOnClikcListener;
+
     public RecyclerViewNeedLikedAdapter(List<NeedLikedInfo> needLikedInfoList) {
         this.needLikedInfoList = needLikedInfoList;
     }
+
+    public void setRecyclerViewOnClikcListener(RecyclerViewOnClikcListener OnClikcListener) {
+        this.recyclerViewOnClikcListener = OnClikcListener;
+    }
+
 
     @Override
     public NeedLikedInfoHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -35,9 +44,19 @@ public class RecyclerViewNeedLikedAdapter extends RecyclerView.Adapter<RecyclerV
     }
 
     @Override
-    public void onBindViewHolder(NeedLikedInfoHolder holder, int position) {
+    public void onBindViewHolder(final NeedLikedInfoHolder holder, int position) {
         holder.iv_liked_fragment.setImageResource(R.mipmap.default_likes_fragment);
         holder.tv_likes_num.setText(needLikedInfoList.get(position).getLikes_num());
+
+        if (recyclerViewOnClikcListener != null) {
+            holder.arl_need_liked_item.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    int pos = holder.getLayoutPosition();
+                    recyclerViewOnClikcListener.onItemClick(pos, holder.iv_liked_fragment, holder.iv_liked_fragment);
+                }
+            });
+        }
     }
 
     @Override
@@ -51,6 +70,8 @@ public class RecyclerViewNeedLikedAdapter extends RecyclerView.Adapter<RecyclerV
         ImageView iv_liked_fragment;
         @BindView(R.id.tv_likes_num)
         TextView tv_likes_num;
+        @BindView(R.id.arl_need_liked_item)
+        AutoRelativeLayout arl_need_liked_item;
 
         public NeedLikedInfoHolder(View itemView) {
             super(itemView);
