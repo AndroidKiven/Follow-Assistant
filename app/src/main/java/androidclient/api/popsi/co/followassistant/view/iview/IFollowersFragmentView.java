@@ -5,4 +5,5 @@ package androidclient.api.popsi.co.followassistant.view.iview;
  */
 
 public interface IFollowersFragmentView extends BaseIView {
+    void getFollowersOrdersList();
 }

@@ -34,7 +34,7 @@
             android:screenOrientation="portrait"></activity>
 
         <activity
-            android:name=".view.activity.MakeOrderActivity"
+            android:name=".view.activity.MakeLikesOrderActivity"
             android:screenOrientation="portrait"></activity>
     </application>
 

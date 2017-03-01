@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import androidclient.api.popsi.co.followassistant.R;
-import androidclient.api.popsi.co.followassistant.adapter.RecyclerViewOrdersListAdapter;
+import androidclient.api.popsi.co.followassistant.adapter.RecyclerViewLikeOrdersListAdapter;
 import androidclient.api.popsi.co.followassistant.autoview.AutoToolbar;
 import androidclient.api.popsi.co.followassistant.bean.OrdersListInfo;
 import androidclient.api.popsi.co.followassistant.presenter.MakeOrderAcitvityPresenter;
@@ -22,7 +22,7 @@ import butterknife.ButterKnife;
  * Created by Kiven on 2017/2/28.
  */
 
-public class MakeOrderActivity extends BaseTranslucentActivity<IMakejOrderActivityView, MakeOrderAcitvityPresenter> implements IMakejOrderActivityView {
+public class MakeLikesOrderActivity extends BaseTranslucentActivity<IMakejOrderActivityView, MakeOrderAcitvityPresenter> implements IMakejOrderActivityView {
 
     @BindView(R.id.rv_orders_list)
     RecyclerView rv_orders_list;
@@ -30,13 +30,13 @@ public class MakeOrderActivity extends BaseTranslucentActivity<IMakejOrderActivi
     AutoToolbar tb_make_orders;
 
 
-    RecyclerViewOrdersListAdapter recyclerViewOrdersListAdapter;
+    RecyclerViewLikeOrdersListAdapter recyclerViewLikeOrdersListAdapter;
     List<OrdersListInfo> ordersListInfoList = new ArrayList<>();
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.make_order_activity);
+        setContentView(R.layout.make_likes_order_activity);
         ButterKnife.bind(this);
         setOrChangeTranslucentColor(tb_make_orders, getResources().getColor(R.color.main_activity_toolbar));
         tb_make_orders.setNavigationOnClickListener(new View.OnClickListener() {
@@ -61,8 +61,8 @@ public class MakeOrderActivity extends BaseTranslucentActivity<IMakejOrderActivi
             ordersListInfo = new OrdersListInfo("x " + i * 5 + "", i * 10 + "");
             ordersListInfoList.add(ordersListInfo);
         }
-        recyclerViewOrdersListAdapter = new RecyclerViewOrdersListAdapter(ordersListInfoList);
+        recyclerViewLikeOrdersListAdapter = new RecyclerViewLikeOrdersListAdapter(ordersListInfoList);
         rv_orders_list.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
-        rv_orders_list.setAdapter(recyclerViewOrdersListAdapter);
+        rv_orders_list.setAdapter(recyclerViewLikeOrdersListAdapter);
     }
 }

@@ -19,24 +19,24 @@ import butterknife.ButterKnife;
  * Created by Kiven on 2017/2/28.
  */
 
-public class RecyclerViewOrdersListAdapter extends RecyclerView.Adapter<RecyclerViewOrdersListAdapter.OrdersListItemHolder> {
+public class RecyclerViewFollowerOrdersListAdapter extends RecyclerView.Adapter<RecyclerViewFollowerOrdersListAdapter.OrdersListItemHolder> {
 
     List<OrdersListInfo> ordersListInfos;
 
-    public RecyclerViewOrdersListAdapter(List<OrdersListInfo> ordersListInfos) {
+    public RecyclerViewFollowerOrdersListAdapter(List<OrdersListInfo> ordersListInfos) {
         this.ordersListInfos = ordersListInfos;
     }
 
     @Override
     public OrdersListItemHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        OrdersListItemHolder itemHolder = new OrdersListItemHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.make_orders_activity_item, parent, false));
+        OrdersListItemHolder itemHolder = new OrdersListItemHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.make_followers_orders_item, parent, false));
         return itemHolder;
     }
 
     @Override
     public void onBindViewHolder(OrdersListItemHolder holder, int position) {
         holder.tv_need_coins_num.setText(ordersListInfos.get(position).getNeedCoinsNum());
-        holder.tv_need_likes_num.setText(ordersListInfos.get(position).getGetLikesNum());
+        holder.tv_need_followers_num.setText(ordersListInfos.get(position).getGetLikesNum());
     }
 
     @Override
@@ -46,8 +46,8 @@ public class RecyclerViewOrdersListAdapter extends RecyclerView.Adapter<Recycler
 
     class OrdersListItemHolder extends RecyclerView.ViewHolder {
 
-        @BindView(R.id.tv_need_likes_num)
-        TextView tv_need_likes_num;
+        @BindView(R.id.tv_need_followers_num)
+        TextView tv_need_followers_num;
         @BindView(R.id.tv_need_coins_num)
         TextView tv_need_coins_num;
 

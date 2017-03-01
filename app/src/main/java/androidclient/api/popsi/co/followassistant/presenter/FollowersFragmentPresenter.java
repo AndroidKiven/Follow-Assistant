@@ -7,4 +7,7 @@ import androidclient.api.popsi.co.followassistant.view.iview.IFollowersFragmentV
  */
 
 public class FollowersFragmentPresenter extends BasePresenter<IFollowersFragmentView> {
+    public void getFollowersOrdersList() {
+        getView().getFollowersOrdersList();
+    }
 }
