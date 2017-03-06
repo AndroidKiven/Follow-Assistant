@@ -15,4 +15,7 @@
     <color name="likes_fragment_top_bg">#d3d3d3</color>
     <color name="likes_fragment_item_likesnum_bg">#80c4c4c4</color>
     <color name="make_orders_item_line">#dbdbdb</color>
+    <color name="more_fragment_border">#dfdfdf</color>
+    <color name="more_fragment_space_block">#e7e7e7</color>
+    <color name="more_fragment_daily_bonus_select">#bfbfbf</color>
 </resources>

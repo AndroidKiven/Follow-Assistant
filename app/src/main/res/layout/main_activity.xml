@@ -59,6 +59,7 @@
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:layout_alignParentBottom="true"
+        android:background="@color/splash_app_title"
         app:itemBackground="@color/splash_app_title"
         app:itemIconTint="@drawable/drawable_bottom_nav_color_selector"
         app:itemTextColor="@drawable/drawable_bottom_nav_color_selector"

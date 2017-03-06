@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -9,7 +10,7 @@
 
         <com.zhy.autolayout.AutoRelativeLayout
             android:id="@+id/arl_earn_coins_like_top"
-            android:layout_width="800px"
+            android:layout_width="900px"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="40px">
@@ -19,7 +20,8 @@
                 android:layout_width="120px"
                 android:layout_height="120px"
                 android:layout_gravity="center_vertical"
-                android:src="@mipmap/default_head" />
+                android:src="@mipmap/default_head"
+                app:layout_auto_basewidth="height" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -47,10 +49,12 @@
             android:layout_below="@id/arl_earn_coins_like_top"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="30px"
-            android:src="@mipmap/default_need_like" />
+            android:scaleType="fitXY"
+            android:src="@mipmap/default_need_like"
+            app:layout_auto_basewidth="height" />
 
         <com.zhy.autolayout.AutoLinearLayout
-            android:layout_width="930px"
+            android:layout_width="910px"
             android:layout_height="wrap_content"
             android:layout_below="@id/iv_need_like_pic"
             android:layout_centerHorizontal="true"
@@ -65,19 +69,6 @@
                 android:textColor="@color/splash_app_title"
                 android:textSize="@dimen/loginactivity_app_name_pass"
                 android:theme="@style/SkipTheme" />
-
-            <!--<Button
-                android:layout_width="match_parent"
-                android:layout_height="160px"
-                android:drawableEnd="@mipmap/like_add_coins"
-                android:drawablePadding="@dimen/like_add_coins_drawablepadding"
-                android:drawableRight="@mipmap/like_add_coins"
-                android:paddingRight="@dimen/like_add_coins_padding"
-                android:text="@string/app_main_like"
-                android:textAllCaps="false"
-                android:textColor="@color/splash_app_title"
-                android:textSize="@dimen/loginactivity_app_name_pass"
-                android:theme="@style/AddLikeTheme" />-->
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="160px"

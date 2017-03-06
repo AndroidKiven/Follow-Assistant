@@ -36,6 +36,13 @@
         <activity
             android:name=".view.activity.MakeLikesOrderActivity"
             android:screenOrientation="portrait"></activity>
+
+        <activity
+            android:name=".view.activity.FeedbackActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".view.activity.DaliyBonusActivity"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

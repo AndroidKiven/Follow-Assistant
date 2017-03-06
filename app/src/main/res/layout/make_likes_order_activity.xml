@@ -56,18 +56,19 @@
 
         <com.makeramen.roundedimageview.RoundedImageView
             android:id="@+id/iv_select_need_liked"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
+            android:layout_width="360px"
+            android:layout_height="360px"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="30px"
             android:scaleType="fitXY"
             android:src="@mipmap/default_likes_fragment"
             android:transitionName="selected_photos_or_videos"
+            app:layout_auto_basewidth="height"
             app:riv_corner_radius="8dp" />
 
         <com.zhy.autolayout.AutoRelativeLayout
-            android:layout_width="120dp"
-            android:layout_height="25dp"
+            android:layout_width="360px"
+            android:layout_height="75px"
             android:layout_alignBottom="@+id/iv_select_need_liked"
             android:layout_alignLeft="@+id/iv_select_need_liked"
             android:layout_alignStart="@+id/iv_select_need_liked"

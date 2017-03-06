@@ -15,4 +15,8 @@
     <dimen name="follow_add_coins_drawablepadding">-10dp</dimen>
     <dimen name="like_fragment_likesnum">13sp</dimen>
     <dimen name="make_orders_item_num">16sp</dimen>
+    <dimen name="daily_bonus_num">30sp</dimen>
+    <dimen name="daily_bonus_day">12sp</dimen>
+    <dimen name="daily_bonus_bottom_btn">20sp</dimen>
+    
 </resources>

@@ -28,4 +28,15 @@
     <string name="app_get_followers_followers_num">122</string>
     <string name="app_get_followers_following">following</string>
     <string name="app_get_followers_following_num">213</string>
+    <string name="more_fragment_item_daily_bonus">Daliy Bonus</string>
+    <string name="more_fragment_item_store">Store</string>
+    <string name="more_fragment_item_logout">Logout</string>
+    <string name="more_fragment_item_share">Share</string>
+    <string name="more_fragment_item_review">Review Our App</string>
+    <string name="more_fragment_item_feedback">Feedback</string>
+    <string name="more_fragment_feedback_submit">Submit</string>
+    <string name="more_fragment_daily_bonus_top">Everyday you come back and reclaim your prize</string>
+    <string name="more_fragment_daily_bonus_num">15</string>
+    <string name="more_fragment_daily_day">DAY 1</string>
+    <string name="more_fragment_daily_bonus_bottom">Get Prize</string>
 </resources>

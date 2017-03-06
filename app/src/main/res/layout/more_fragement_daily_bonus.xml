@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidclient.api.popsi.co.followassistant.autoview.AutoToolbar
+        android:id="@+id/tb_title"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/main_activity_toolbar"
+        android:minHeight="?attr/actionBarSize"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        app:theme="@style/AppTheme">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/more_fragment_item_daily_bonus"
+            android:textColor="@color/splash_app_title"
+            android:textSize="@dimen/loginactivity_app_name_pass"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="45px"
+            android:src="@mipmap/notify_message" />
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="45px"
+            android:background="@mipmap/coins_bg">
+
+            <ImageView
+                android:id="@+id/iv_coins"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/coins" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@id/iv_coins"
+                android:maxLines="1"
+                android:text="@string/app_main_coins_number"
+                android:textColor="@color/splash_app_title"
+                android:textSize="@dimen/coins_num_textsize" />
+        </com.zhy.autolayout.AutoRelativeLayout>
+    </androidclient.api.popsi.co.followassistant.autoview.AutoToolbar>
+
+
+    <TextView
+        android:id="@+id/tv_daliy_bonus_top"
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:layout_below="@id/tb_title"
+        android:gravity="center"
+        android:text="@string/more_fragment_daily_bonus_top"
+        android:textSize="@dimen/make_orders_item_num" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_daliy_bonus_sheet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_daliy_bonus_top"
+        android:layout_marginLeft="40px"
+        android:layout_marginRight="40px"
+        android:layout_marginTop="40px"></android.support.v7.widget.RecyclerView>
+
+    <Button
+        android:id="@+id/bt_submit_feedback"
+        android:layout_width="match_parent"
+        android:layout_height="180px"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="40px"
+        android:layout_marginRight="40px"
+        android:text="@string/more_fragment_daily_bonus_bottom"
+        android:textColor="@color/splash_app_title"
+        android:textSize="@dimen/daily_bonus_bottom_btn"
+        android:theme="@style/SkipTheme" />
+</com.zhy.autolayout.AutoRelativeLayout>

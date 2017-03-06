@@ -1,6 +1,7 @@
 package androidclient.api.popsi.co.followassistant.view.fragment;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityOptionsCompat;
@@ -73,6 +74,9 @@ public class LikesFragment extends BaseFragment<ILikesFragmentView, LikesFragmen
         rv_all_photos_videos.setLayoutManager(new GridLayoutManager(getContext(), 3));
         rv_all_photos_videos.addItemDecoration(new SpaceItemDecoration(6));
         rv_all_photos_videos.setAdapter(recyclerViewNeedLikedAdapter);
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {
+            rv_all_photos_videos.setOverScrollMode(View.OVER_SCROLL_NEVER);
+        }
     }
 
     @Override

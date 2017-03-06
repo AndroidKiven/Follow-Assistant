@@ -1,13 +1,234 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidclient.api.popsi.co.followassistant.autoview.AutoReboundScrollview xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
-    android:orientation="vertical">
+    android:scrollbars="none">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="More"
-        android:textSize="30sp" />
-</LinearLayout>
+    <com.zhy.autolayout.AutoRelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/ll_user_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30px"
+            android:weightSum="4">
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="120px"
+                    android:layout_height="120px"
+                    app:layout_auto_basewidth="height"
+                    android:src="@mipmap/default_head" />
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_user_posts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/app_get_followers_posts_num"
+                    android:textColor="@color/likes_fragment_top_text"
+                    android:textSize="@dimen/make_orders_item_num"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/app_get_followers_posts"
+                    android:textSize="@dimen/coins_num_textsize" />
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_user_followers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/app_get_followers_followers_num"
+                    android:textColor="@color/likes_fragment_top_text"
+                    android:textSize="@dimen/make_orders_item_num"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/app_get_followers_followers"
+                    android:textSize="@dimen/coins_num_textsize" />
+            </com.zhy.autolayout.AutoLinearLayout>
+
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_user_following"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/app_get_followers_following_num"
+                    android:textColor="@color/likes_fragment_top_text"
+                    android:textSize="@dimen/make_orders_item_num"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/app_get_followers_following"
+                    android:textSize="@dimen/coins_num_textsize" />
+            </com.zhy.autolayout.AutoLinearLayout>
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <View
+            android:id="@+id/v_line_1"
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:layout_below="@id/ll_user_info"
+            android:layout_marginTop="30px"
+            android:background="@color/more_fragment_border"></View>
+
+        <View
+            android:id="@+id/v_block_1"
+            android:layout_width="match_parent"
+            android:layout_height="20px"
+            android:layout_below="@id/v_line_1"
+            android:background="@color/more_fragment_space_block"></View>
+
+        <View
+            android:id="@+id/v_line_2"
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:layout_below="@id/v_block_1"
+            android:background="@color/more_fragment_border"></View>
+
+        <androidclient.api.popsi.co.followassistant.autoview.MoreItemFunction
+            android:id="@+id/mif_daily_bonus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/v_line_2"
+            app:item_icon="@mipmap/daliy_bonus_icon"
+            app:item_text="@string/more_fragment_item_daily_bonus"></androidclient.api.popsi.co.followassistant.autoview.MoreItemFunction>
+
+        <View
+            android:id="@+id/v_line_3"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_below="@id/mif_daily_bonus"
+            android:layout_marginLeft="40px"
+            android:background="@color/more_fragment_border"></View>
+
+        <androidclient.api.popsi.co.followassistant.autoview.MoreItemFunction
+            android:id="@+id/mif_store"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/v_line_3"
+            app:item_icon="@mipmap/store_icon"
+            app:item_text="@string/more_fragment_item_store"></androidclient.api.popsi.co.followassistant.autoview.MoreItemFunction>
+
+        <View
+            android:id="@+id/v_line_4"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_below="@id/mif_store"
+            android:layout_marginLeft="40px"
+            android:background="@color/more_fragment_border"></View>
+
+        <androidclient.api.popsi.co.followassistant.autoview.MoreItemFunction
+            android:id="@+id/mif_logout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/v_line_4"
+            app:item_icon="@mipmap/logout_icon"
+            app:item_text="@string/more_fragment_item_logout"></androidclient.api.popsi.co.followassistant.autoview.MoreItemFunction>
+
+
+        <View
+            android:id="@+id/v_line_5"
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:layout_below="@id/mif_logout"
+            android:layout_marginTop="30px"
+            android:background="@color/more_fragment_border"></View>
+
+        <View
+            android:id="@+id/v_block_2"
+            android:layout_width="match_parent"
+            android:layout_height="20px"
+            android:layout_below="@id/v_line_5"
+            android:background="@color/more_fragment_space_block"></View>
+
+        <View
+            android:id="@+id/v_line_6"
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:layout_below="@id/v_block_2"
+            android:background="@color/more_fragment_border"></View>
+
+        <androidclient.api.popsi.co.followassistant.autoview.MoreItemFunction
+            android:id="@+id/mif_share"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/v_line_6"
+            app:item_icon="@mipmap/share_icon"
+            app:item_text="@string/more_fragment_item_share"></androidclient.api.popsi.co.followassistant.autoview.MoreItemFunction>
+
+        <View
+            android:id="@+id/v_line_7"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_below="@id/mif_share"
+            android:layout_marginLeft="40px"
+            android:background="@color/more_fragment_border"></View>
+
+        <androidclient.api.popsi.co.followassistant.autoview.MoreItemFunction
+            android:id="@+id/mif_review"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/v_line_7"
+            app:item_icon="@mipmap/review_icon"
+            app:item_text="@string/more_fragment_item_review"></androidclient.api.popsi.co.followassistant.autoview.MoreItemFunction>
+
+        <View
+            android:id="@+id/v_line_8"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_below="@id/mif_review"
+            android:layout_marginLeft="40px"
+            android:background="@color/more_fragment_border"></View>
+
+        <androidclient.api.popsi.co.followassistant.autoview.MoreItemFunction
+            android:id="@+id/mif_feedback"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/v_line_8"
+            app:item_icon="@mipmap/feedback_icon"
+            app:item_text="@string/more_fragment_item_feedback"></androidclient.api.popsi.co.followassistant.autoview.MoreItemFunction>
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+</androidclient.api.popsi.co.followassistant.autoview.AutoReboundScrollview>

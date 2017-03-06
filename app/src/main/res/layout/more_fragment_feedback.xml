@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidclient.api.popsi.co.followassistant.autoview.AutoToolbar
+        android:id="@+id/tb_feedbcak"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/main_activity_toolbar"
+        android:minHeight="?attr/actionBarSize"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        app:navigationIcon="@drawable/abc_ic_ab_back_material"
+        app:theme="@style/back_arrow_white_theme">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/more_fragment_item_feedback"
+            android:textColor="@color/splash_app_title"
+            android:textSize="@dimen/loginactivity_app_name_pass"
+            android:textStyle="bold" />
+    </androidclient.api.popsi.co.followassistant.autoview.AutoToolbar>
+
+    <EditText
+        android:id="@+id/et_edittext_content"
+        android:layout_width="980px"
+        android:layout_height="570px"
+        android:layout_below="@id/tb_feedbcak"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60px"
+        android:background="@drawable/drawable_edit_border"
+        android:gravity="start"
+        android:inputType="textMultiLine"
+        android:paddingTop="5px"
+        android:textCursorDrawable="@drawable/drawable_edittext_cursor"
+        app:layout_auto_basewidth="height" />
+
+    <Button
+        android:id="@+id/bt_submit_feedback"
+        android:layout_width="980px"
+        android:layout_height="180px"
+        android:layout_below="@id/et_edittext_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/more_fragment_feedback_submit"
+        android:textColor="@color/splash_app_title"
+        android:textSize="@dimen/loginactivity_app_name_pass"
+        android:theme="@style/SkipTheme" />
+
+</com.zhy.autolayout.AutoRelativeLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="more_fragment_item">
+        <attr name="item_icon"></attr>
+        <attr name="item_text"></attr>
+    </declare-styleable>
+
+    <attr name="item_icon" format="reference"></attr>
+    <attr name="item_text" format="string"></attr>
+
+</resources>

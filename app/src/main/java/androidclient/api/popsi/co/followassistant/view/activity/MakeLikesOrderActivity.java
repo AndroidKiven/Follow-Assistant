@@ -1,5 +1,6 @@
 package androidclient.api.popsi.co.followassistant.view.activity;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
@@ -64,5 +65,8 @@ public class MakeLikesOrderActivity extends BaseTranslucentActivity<IMakejOrderA
         recyclerViewLikeOrdersListAdapter = new RecyclerViewLikeOrdersListAdapter(ordersListInfoList);
         rv_orders_list.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
         rv_orders_list.setAdapter(recyclerViewLikeOrdersListAdapter);
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {
+            rv_orders_list.setOverScrollMode(View.OVER_SCROLL_NEVER);
+        }
     }
 }
